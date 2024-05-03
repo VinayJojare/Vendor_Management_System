@@ -76,16 +76,16 @@ WSGI_APPLICATION = 'Vendor_Management_System.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vendor_management_database',
-        "USER": "root",
-        "PASSWORD": "Root1234",
-        "HOST": "localhost",
-        "PORT": "3306",
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'vendor_management_database',
+#         "USER": "root",
+#         "PASSWORD": "Root1234",
+#         "HOST": "localhost",
+#         "PORT": "3306",
+#     }
+# }
 
 
 # Password validation
