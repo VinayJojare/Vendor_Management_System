@@ -1,10 +1,6 @@
 from rest_framework import serializers
 from .models import Vendor, Performance, Purchase
-
-# Your serializer code here
-
-
-# Your serializer code here
+from django.contrib.auth.models import User
 
 
 class Venderserializer(serializers.ModelSerializer):
@@ -23,3 +19,15 @@ class Performanceserializer(serializers.ModelSerializer):
     class Meta:
         model = Performance
         fields = "__all__"
+
+
+class UserSerialazer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username', 'password']
+
+    def create(self, validated_data):
+        user = User.objects.create(username=validated_data['username'])
+        user.set_password(validated_data['password'])
+        user.save()
+        return user

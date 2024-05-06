@@ -16,4 +16,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Vendor_Management_System.settin
 application = get_wsgi_application()
 
 
-app = application
