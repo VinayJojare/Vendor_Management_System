@@ -46,9 +46,19 @@ Start the development server by running:
 python manage.py runserver
 
 
-The server will start running at `http://localhost:8000/`.
+The server will start running at 'http://localhost:8000/'.
+
+admin page : 'http://127.0.0.1:8000/admin/'
+
+## Token generations : -
+
+  this api's are secured by token based authentication so to access it on postman generate token in admin page by logging in into admin page and then 
+  Users need to include their token in the request header when making requests to the API. The token should be included in the Authorization header prefixed with the string "Token".
+  ex: - headers = {'Authorization': 'Token your_token_here'} in postman or thunder client
+  
 
 ## API Endpoints
+note : use token to access api's
 ### Vendors
 - `GET /api/vendors/`: List all vendors
 - `POST /api/vendors/`: Create a new vendor
